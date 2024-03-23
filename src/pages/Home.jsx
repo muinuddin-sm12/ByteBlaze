@@ -1,10 +1,11 @@
-import Nav from "../components/NavBar"
-
+import Hero from "../components/Hero"
+import wave from "../images/wave.svg"
 const Home = () => {
   return (
-    <>
-    <div>HomePage</div>
-    </>
+    <div className="relative">
+        <Hero></Hero>
+        <img className="absolute bottom-0 w-full" src={wave} alt="" />
+    </div>
   )
 }
 

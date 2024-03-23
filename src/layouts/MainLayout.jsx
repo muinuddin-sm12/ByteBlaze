@@ -1,5 +1,6 @@
-import { Outlet } from "react-router-dom"
-import NavBar from "../components/NavBar"
+import { Outlet } from "react-router-dom";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 // import Blogs from "../pages/Blogs"
 // import Bookmarks from "../pages/Bookmarks"
 // import Home from "../pages/Home"
@@ -7,12 +8,15 @@ import NavBar from "../components/NavBar"
 const MainLayout = () => {
   return (
     <div>
-        <div className="h-[72px]">
-            <NavBar/>
-        </div>
-        <Outlet/>
+      <div className="h-[64px]">
+        <NavBar />
+      </div>
+      <div className="min-h-[calc(100vh-116px)]">
+        <Outlet />
+      </div>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default MainLayout
+export default MainLayout;
